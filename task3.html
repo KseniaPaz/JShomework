@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задание 1
+        // Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2^3 степени + 3 ^ 3 степени
+
+        function pow (num) {
+            return (num ** 3);
+        }
+        console.log(pow (2) + pow (3));
+
+        // Задание 2
+        // Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что значение задано неверно
+        // Создать фукнцию, которая высчитывает 13% от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
+
+        salaryFull = Number (prompt ('Введите сумму вашей заработной платы'));
+        if (isNaN (salaryFull)) {
+            alert('введено не верное значение');
+        }
+        function salaryClear (salaryFull) {
+            console.log(`Размер заработной платы за вычетом налогов равен: ${salaryFull * 0.87}`);
+        }
+        salaryClear(salaryFull);
+        
+        
+
+    </script>
+</body>
+</html>
