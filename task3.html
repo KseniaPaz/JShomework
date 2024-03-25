@@ -61,9 +61,17 @@
         console.log(sum(2, 6));
         
         const difference = (a,b) => {
-            return a - b;
+            if (a > b) {
+              return a - b;  
+            } else if (b > a) {
+                return b - a;  
+            } else {
+                return 0;
+            }         
         }
-        console.log(difference(20, 6));
+        console.log(difference(9, 3));
+        console.log(difference(3, 9));
+        console.log(difference(9, 9));
 
         const multiplication = (a,b) => {
             return a * b;
@@ -71,12 +79,17 @@
         console.log(multiplication(2, 6)); 
 
         const division = (a,b) => {
-            return a / b;
+            if (a > b) {
+              return a / b;  
+            } else if (b > a) {
+                return b / a;  
+            } else {
+                return 1;
+            }         
         }
         console.log(division(12, 6));
-
-
-
+        console.log(division(6, 12));
+        console.log(division(12, 12));
     </script>
 </body>
 </html>
