@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-    // Задание 1
-    // Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
-    // 0 – это ноль
-    // 1 – нечетное число
-    // 2 – четное число
-    // 3 – нечетное число
-    // …
-    // 10 – четное число
+        // Задание 1
+        // Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
+        // 0 – это ноль
+        // 1 – нечетное число
+        // 2 – четное число
+        // 3 – нечетное число
+        // …
+        // 10 – четное число
 
-    for (let num = 0; num < 11; num++) {
-        if (num % 2 == 0 && num > 0) {
-            console.log(`${num} - четное число`);
-        } else { 
-            if (num % 2 != 0 && num > 0) {
-            console.log(`${num} - нечетное число`);
-            } else {console.log(`${num} - это ноль`);}    
-        };
-    }
-
-    // Задание 2
-    // Дан массив [1, 2, 3, 4, 5, 6, 7]
-    // Сделайте из этого массива следующий [1, 2, 3, 6, 7]
-
-    const arr = [1, 2, 3, 4, 5, 6, 7];
-    console.log(arr);
-    arr.splice (3,2);
-    console.log(arr);
-    
-    // Задание 3
-    // Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
-    // 1. Рассчитать сумму элементов этого массива
-    // 2. Найти минимальное число
-    // 3. Найти есть ли в этом массиве число 3
-
-    const array = [];
-    for (let i = 0; i < 5; i++) {
-        const j = Math.round (Math.random() * 9);
-        array [i] = j;
-    }
-    console.log(`Массив: ${array}`);
-
-    let sum = (a) => {
-        sum = 0;
-        for (let index = 0; index < array.length; index++) {
-            sum += array[index];
-        } 
-        return sum;
-    }
-    console.log(`сумма элементов этого массива ${sum(array)}`);
-
-    const min = (param) => {
-        let minNumber = array[0];
-        for (let index = 0; index < array.length; index++) {
-            if (array[index] < minNumber) {
-                minNumber = array[index];
-            }  
+        for (let num = 0; num < 11; num++) {
+            if (num % 2 == 0 && num > 0) {
+                console.log(`${num} - четное число`);
+            } else {
+                if (num % 2 != 0 && num > 0) {
+                    console.log(`${num} - нечетное число`);
+                } else { console.log(`${num} - это ноль`); }
+            };
         }
-        return minNumber;
-    }
-    console.log(`минимальное число этого массива ${min(array)}`);
 
-    function threeNum (param) {
-        for (let index = 0; index < array.length; index++) {
-            if (array[index] == 3) {
-                console.log('в этом массиве есть число 3');
-                break;
-            } 
+        // Задание 2
+        // Дан массив [1, 2, 3, 4, 5, 6, 7]
+        // Сделайте из этого массива следующий [1, 2, 3, 6, 7]
+
+        const arr = [1, 2, 3, 4, 5, 6, 7];
+        console.log(arr);
+        arr.splice(3, 2);
+        console.log(arr);
+
+        // Задание 3
+        // Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
+        // 1. Рассчитать сумму элементов этого массива
+        // 2. Найти минимальное число
+        // 3. Найти есть ли в этом массиве число 3
+
+        const array = [];
+        for (let i = 0; i < 5; i++) {
+            const j = Math.round(Math.random() * 9);
+            array[i] = j;
         }
-    }
-    threeNum (array);
+        console.log(`Массив: ${array}`);
+
+        let sum = (a) => {
+            sum = 0;
+            for (let index = 0; index < array.length; index++) {
+                sum += array[index];
+            }
+            return sum;
+        }
+        console.log(`сумма элементов этого массива ${sum(array)}`);
+
+        const min = (param) => {
+            let minNumber = array[0];
+            for (let index = 0; index < array.length; index++) {
+                if (array[index] < minNumber) {
+                    minNumber = array[index];
+                }
+            }
+            return minNumber;
+        }
+        console.log(`минимальное число этого массива ${min(array)}`);
+
+        function threeNum(param) {
+            for (let index = 0; index < array.length; index++) {
+                if (array[index] == 3) {
+                    console.log('в этом массиве есть число 3');
+                    break;
+                }
+            }
+        }
+        threeNum(array);
     </script>
 </body>
+
 </html>
