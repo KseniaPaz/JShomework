@@ -119,6 +119,22 @@
         product.sort((x1, x2) => x1.price - x2.price);
         console.log(product);
 
+        // Задание 5.
+        // Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, а значения второго массива — значениями.
+
+
+        const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+        const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+
+        const weekdays = {};
+        if (en.length !== ru.length) {
+            console.log('длина массивов не равна');
+        } else {
+            for (let i = 0; i < en.length; i++) {
+                weekdays[en[i]] = ru[i];
+            }
+        }
+        console.log(weekdays);
 
     </script>
 </body>
